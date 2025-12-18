@@ -1,0 +1,152 @@
+/* =========================================
+   Variables de Estilo Industrial
+   ========================================= */
+:root {
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --bg-app: #f4f4f4;
+  --bg-card: #ffffff;
+  --color-dark: #2d3436;      /* Gris grafito */
+  --color-border: #dcdde1;
+  --text-main: #2d3436;
+  --radius-flat: 4px;
+  --transition: all 0.2s ease;
+}
+
+/* =========================================
+   Reset y Base
+   ========================================= */
+html, body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================
+   Botones Principales
+   ========================================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.8px;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius-flat);
+  border: 1px solid var(--color-dark);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-dark);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* =========================================
+   Iconos de Acción en Tabla
+   ========================================= */
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.3rem; /* Tamaño de los Bootstrap Icons */
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover {
+  transform: scale(1.25); /* Crece al pasar el mouse */
+  opacity: 0.7;
+}
+
+/* Colores de iconos */
+.text-primary { color: #0d6efd !important; }
+.text-danger { color: #dc3545 !important; }
+.text-secondary { color: #6c757d !important; }
+
+/* =========================================
+   Estados (Badges) Serios
+   ========================================= */
+.badge-status {
+  padding: 5px 10px;
+  font-weight: 800;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+  display: inline-block;
+  text-align: center;
+  min-width: 100px;
+}
+
+/* Finalizado: Verde Industrial */
+.status-finalizado {
+  background-color: #1b4332; 
+  color: #d8f3dc;
+  border: 1px solid #2d6a4f;
+}
+
+/* Pendiente: Gris Acero */
+.status-pendiente {
+  background-color: #343a40;
+  color: #f8f9fa;
+  border: 1px solid #495057;
+}
+
+/* =========================================
+   Estructura de Tabla
+   ========================================= */
+.card {
+  border: 1px solid var(--color-border);
+  background: white;
+}
+
+th {
+  background-color: var(--color-dark) !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 14px !important;
+  border: none;
+}
+
+td {
+  padding: 12px !important;
+  border-bottom: 1px solid #edf0f2;
+}
+
+tr:hover {
+  background-color: #fcfcfc;
+}
+/* Asegúrate de tener esto en tu index.css */
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+.table-dark {
+  background-color: #2d3436 !important;
+}
