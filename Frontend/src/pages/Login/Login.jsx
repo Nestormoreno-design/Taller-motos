@@ -21,6 +21,27 @@ export default function Login({ setIsLoggedIn, setCurrentUser }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    
+    // --- SIMULACRO PARA DEMO EN GITHUB PAGES ---
+    // Esto permite que el reclutador entre usando estas credenciales
+    setTimeout(() => {
+      if (form.usuario === "admin" && form.password === "123456") {
+        const fakeUser = {
+          id: 1,
+          usuario: "admin",
+          nombre: "Nestor Moreno (Demo)"
+        };
+        
+        setIsLoggedIn(true);
+        if (setCurrentUser) setCurrentUser(fakeUser);
+        navigate("/");
+      } else {
+        setError("Para la demo usa: admin / 123456");
+        setLoading(false);
+      }
+    }, 1000); // Simulamos un segundo de carga para que se vea el spinner
+
+    /* // Código original para producción con Flask:
     try {
       const response = await login(form);
       setIsLoggedIn(true);
@@ -29,7 +50,8 @@ export default function Login({ setIsLoggedIn, setCurrentUser }) {
     } catch (err) {
       setError("Usuario o contraseña incorrectos");
       setLoading(false);
-    }
+    } 
+    */
   };
 
   return (
@@ -123,4 +145,5 @@ export default function Login({ setIsLoggedIn, setCurrentUser }) {
       </div>
     </div>
   );
+
 }
